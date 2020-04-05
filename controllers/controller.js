@@ -49,10 +49,7 @@ Update = async (req, res) => {
                 message: 'Employee not found!',
             })
         }
-        if(movie != null)
         movie.reviews.push(body.reviews);
-        else
-            movie = (body);
         movie
             .save()
             .then(() => {
